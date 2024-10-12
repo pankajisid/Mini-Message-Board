@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Mini Message Board</title>
+    </head>
+    <body>
+        <% messages.forEach((msg)=>{ %>
+            <span><%= msg.user %></span><br>
+            <span><%= msg.text %></span><br>
+            <span><%= msg.added %></span><br>
+            <a href="/message/<%= msg.id %>"><button class="msg-button" id="<%=msg.id %>">Open</button></a><br><br>
+        <% }) %>
+        <button id="handle-button">Go to Form</button>
+        <script src="../script.js"></script>
+    </body>
+</html>
